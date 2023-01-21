@@ -1,0 +1,8 @@
+print("Hi, Howdy")
+husband = input("My Husband name is ")
+
+wife = input("And I am "+husband+"'s wife, ")
+
+h=husband[0:3]
+w=wife[0:3]
+print("People call us by name " +h+w)
