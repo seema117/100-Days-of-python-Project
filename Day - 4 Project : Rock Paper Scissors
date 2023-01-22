@@ -1,0 +1,11 @@
+import random
+sign = ['Rock', 'paper', 'scissors']
+
+r = random.randint(0,2)
+
+player = input(" choose rock or paper or scissors ")
+print(sign[r])
+if sign[r] == player:
+    print("Draw")
+else:
+    print("sorry, Game over")
