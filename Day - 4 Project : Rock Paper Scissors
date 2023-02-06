@@ -1,11 +1,22 @@
+# Go to https://replit.com/@appbrewery/rock-paper-scissors-start?v=1
 import random
-sign = ['Rock', 'paper', 'scissors']
 
-r = random.randint(0,2)
-
-player = input(" choose rock or paper or scissors ")
-print(sign[r])
-if sign[r] == player:
+computer_choice = random.randint(0,2)
+sign = ['Rock', 'Paper', 'scissors']
+player_choice = int(input(" Choose 0 for rock or 1 for paper or 2 for scissors "))
+print(f"Player : {sign[player_choice]}")
+print(f"Computer : {sign[computer_choice]}")
+if computer_choice ==0 and player_choice == 1:
+    print("Player Wins")
+if player_choice == 0 and computer_choice ==0:
+    print("Computer Wins")
+if computer_choice ==0 and player_choice ==2:
+    print("Computer Wins")
+if player_choice ==0 and computer_choice==2:
+    print("Player Wins")
+if computer_choice==1 and player_choice==2:
+    print("player Wins")
+if player_choice ==1 and computer_choice==2:
+    print("Computer Wins")
+if player_choice == computer_choice:
     print("Draw")
-else:
-    print("sorry, Game over")
