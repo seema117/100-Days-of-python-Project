@@ -7,15 +7,17 @@ print(f"Player : {sign[player_choice]}")
 print(f"Computer : {sign[computer_choice]}")
 if computer_choice ==0 and player_choice == 1:
     print("Player Wins")
-if player_choice == 0 and computer_choice ==0:
+elif player_choice == 0 and computer_choice ==0:
     print("Computer Wins")
-if computer_choice ==0 and player_choice ==2:
+elif computer_choice ==0 and player_choice ==2:
     print("Computer Wins")
-if player_choice ==0 and computer_choice==2:
+elif player_choice ==0 and computer_choice==2:
     print("Player Wins")
-if computer_choice==1 and player_choice==2:
+elif computer_choice==1 and player_choice==2:
     print("player Wins")
-if player_choice ==1 and computer_choice==2:
+elif player_choice ==1 and computer_choice==2:
     print("Computer Wins")
-if player_choice == computer_choice:
+elif player_choice == computer_choice:
     print("Draw")
+else:
+    print("Invalid Number")
