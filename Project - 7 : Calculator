@@ -1,0 +1,36 @@
+def add(n1,n2):
+	return n1+n2
+def sub(n1,n2):
+	return n1-n2
+def mul(n1,n2):
+	return n1 * n2
+def div(n1,n2):
+	return n1/n2
+def mod(n1,n2):
+	return n1%n2
+
+def calculator():
+    operation = { "+" : add, "-" : sub, "*" : mul, "/" : div,"%" : mod}
+    num1 = int(input("Enter number1:"))
+    num2 = int(input("Enter number2:"))
+    for n in operation:
+        print(n)
+    op_pick=input("Pick one operation symbol: ")
+    cal = operation[op_pick]
+    ans = cal(num1,num2)
+    print(f"{num1} {op_pick} {num2} = {ans}")
+    def cont():
+	    con = input("Type yes to continue with pervious ans or to exit type no or start new cal \n")
+	    if con == "yes":
+		    num3 = int(input("Enter number:"))
+		    op_pick=input("Pick one operation symbol: ")
+		    cal = operation[op_pick]
+		    new_ans = cal(ans, num3)
+		    print(f"{ans} {op_pick} {num3} = {new_ans}")
+		    cont()
+	    elif con == "no":
+		    print("End")
+	    else:
+		    calculator()
+    cont()
+calculator()
