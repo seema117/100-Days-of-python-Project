@@ -1,0 +1,30 @@
+from replit import clear
+#HINT: You can call clear() to clear the output in the console.
+clear()
+bid_list = {}
+
+
+def bid_result():
+	for n in bid_list:
+		big_num = 0
+		bid_at = bid_list[n]
+		if bid_at > big_num:
+			big_num=bid_at	
+	print(f"The winner {n} with a bid of ${big_num}")
+		
+def bidder(name,bid):
+	bid_list[name]= bid
+	any_bid = input("Any bidders yes or no?")
+	if any_bid == "yes":
+		clear()
+		taking_input()
+	else:
+		bid_result()
+		print(bid_list)
+
+	
+def taking_input():
+	name = input("What is your name?:")
+	bid = int(input("How much is bid?:"))
+	bidder(name,bid)
+taking_input()
